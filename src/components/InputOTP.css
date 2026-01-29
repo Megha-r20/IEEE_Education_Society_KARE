@@ -1,0 +1,58 @@
+.input-otp-root {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: text;
+    width: fit-content;
+}
+
+.input-otp-hidden-field {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    /* Let clicks pass through to root usually, but we need focus. 
+                           Actually, if root handles click->focus, this can be hidden or -9999px.
+                           However, for mobile keyboard, it should stay 'visible' but transparent. 
+                        */
+    pointer-events: auto;
+    /* Needs to receive events if specialized, but we are using root click handler */
+    z-index: 1;
+    /* Above visual slots? If it captures clicks, yes. */
+    background: transparent;
+    color: transparent;
+    border: none;
+    outline: none;
+    caret-color: transparent;
+}
+
+@keyframes caret-blink {
+
+    0%,
+    70%,
+    100% {
+        opacity: 1;
+    }
+
+    20%,
+    50% {
+        opacity: 0;
+    }
+}
+
+.animate-caret-blink {
+    animation: caret-blink 1.25s ease-out infinite;
+}
+
+/* User code provided some tailwind utilities, handled by 'cn' in JSX mostly. 
+   We add base styles here if needed. 
+*/
+.border-input {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.ring-ring {
+    --tw-ring-color: #F28C28;
+}

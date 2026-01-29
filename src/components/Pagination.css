@@ -1,0 +1,67 @@
+.pagination-root {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.pagination-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+    /* gap-1 */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination-item {
+    /* No spec styles, just wrapping */
+}
+
+/* PaginationLink uses .btn classes from Button.css, so no extra CSS needed unless overriding. */
+
+.pagination-previous,
+.pagination-next {
+    gap: 0.25rem;
+    /* gap-1 */
+    padding-left: 0.625rem;
+    /* px-2.5 */
+    padding-right: 0.625rem;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+@media (min-width: 640px) {
+    .pagination-previous {
+        padding-left: 0.625rem;
+        /* sm:pl-2.5 actually user code said sm:pl-2.5 for prev */
+        /* user code: px-2.5 sm:pl-2.5 for prev, px-2.5 sm:pr-2.5 for next. 
+           Basically standard button padding plus icon adjustment.
+           We can stick to simple padding.
+        */
+    }
+}
+
+.pagination-ellipsis {
+    display: flex;
+    height: 2.25rem;
+    /* size-9 = 2.25rem */
+    width: 2.25rem;
+    align-items: center;
+    justify-content: center;
+    color: #EAEAEA;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (min-width: 640px) {
+    .sm\:block {
+        display: block;
+    }
+}

@@ -1,0 +1,73 @@
+/* Base Alert Styles */
+.alert {
+    position: relative;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid;
+    padding: 1rem;
+    font-size: 0.875rem;
+    /* text-sm */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+
+.alert:has(> svg) {
+    grid-template-columns: 2rem 1fr;
+    /* Space for icon */
+    align-items: start;
+}
+
+.alert>svg {
+    height: 1rem;
+    /* size-4 */
+    width: 1rem;
+    margin-top: 0.25rem;
+    /* translate-y-0.5 */
+    color: currentColor;
+}
+
+/* Variants */
+.alert-default {
+    background-color: #1E3A66;
+    /* Card background match */
+    color: #EAEAEA;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.alert-destructive {
+    border-color: rgba(212, 24, 61, 0.5);
+    /* Destructive border (red) */
+    color: #d4183d;
+    /* Destructive text */
+    background-color: rgba(212, 24, 61, 0.1);
+}
+
+.alert-destructive>svg {
+    color: #d4183d;
+}
+
+/* Title & Description */
+.alert-title {
+    margin: 0;
+    font-weight: 500;
+    line-height: 1;
+    grid-column-start: 2;
+    /* Ensure it sits to right of icon if present */
+}
+
+.alert:not(:has(> svg)) .alert-title {
+    grid-column-start: 1;
+}
+
+.alert-description {
+    font-size: 0.875rem;
+    color: rgba(234, 234, 234, 0.8);
+    /* Muted foreground */
+    line-height: 1.6;
+    grid-column-start: 2;
+}
+
+.alert:not(:has(> svg)) .alert-description {
+    grid-column-start: 1;
+}

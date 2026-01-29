@@ -1,0 +1,54 @@
+.tooltip-trigger-wrapper {
+    display: inline-block;
+}
+
+.tooltip-content {
+    /* Using transform to place above by default if we use top: trigger.top */
+    /* top: trigger.top - offset. We use transform strictly for centering X usually. */
+    /* To place ABOVE: top: trigger.top, transform: translate(-50%, -100%) */
+    transform: translate(-50%, -100%);
+    margin-top: -0.5rem;
+    /* Extra gap equivalent to offset if needed via margin */
+
+    background-color: #F28C28;
+    /* bg-primary */
+    color: #FFFFFF;
+    /* text-primary-foreground */
+    border-radius: 0.375rem;
+    /* rounded-md */
+    padding: 0.375rem 0.75rem;
+    /* px-3 py-1.5 */
+    font-size: 0.75rem;
+    /* text-xs */
+    line-height: 1rem;
+    pointer-events: none;
+    animation: tooltip-in 0.15s ease-out;
+    white-space: nowrap;
+    z-index: 50;
+}
+
+@keyframes tooltip-in {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -95%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -100%);
+    }
+}
+
+.tooltip-arrow {
+    position: absolute;
+    bottom: -0.25rem;
+    /* push down */
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 0.625rem;
+    /* size-2.5 */
+    height: 0.625rem;
+    background-color: #F28C28;
+    /* bg-primary */
+    z-index: -1;
+}

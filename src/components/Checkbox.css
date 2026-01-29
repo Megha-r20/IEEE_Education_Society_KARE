@@ -1,0 +1,56 @@
+.checkbox-root {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 1rem;
+    /* size-4 */
+    width: 1rem;
+    flex-shrink: 0;
+    border-radius: 0.25rem;
+    /* rounded-[4px] */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    /* border usually defaults to this in dark */
+    background-color: transparent;
+    /* bg-input-background (assuming transparent/dark) */
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+    padding: 0;
+}
+
+.checkbox-root:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(242, 140, 40, 0.5);
+    /* ring */
+}
+
+.checkbox-root:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* Checked State */
+.checkbox-root[data-state='checked'] {
+    background-color: #F28C28;
+    /* Primary */
+    border-color: #F28C28;
+    color: #FFFFFF;
+    /* text-primary-foreground */
+}
+
+/* Indicator */
+.checkbox-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.checkbox-icon {
+    height: 0.875rem;
+    /* size-3.5 */
+    width: 0.875rem;
+    stroke-width: 3px;
+    /* thicker check */
+}

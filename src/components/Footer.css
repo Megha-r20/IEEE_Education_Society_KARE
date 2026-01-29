@@ -1,0 +1,157 @@
+/* Main Footer Container: bg-[#000000] text-[#EAEAEA] border-t border-[#1E3A66] */
+.footer-container-new {
+    background-color: #000000;
+    color: #EAEAEA;
+    border-top: 1px solid #1E3A66;
+    width: 100%;
+}
+
+/* Wrapper: max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 */
+.footer-content-wrapper {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+}
+
+@media (min-width: 640px) {
+    .footer-content-wrapper {
+        padding: 3rem 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-content-wrapper {
+        padding: 3rem 2rem;
+    }
+}
+
+/* Grid: grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Headings: text-[#F28C28] mb-4 */
+.footer-heading {
+    color: #F28C28;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    /* h3 default usually, assume base+ or lg */
+    font-weight: 700;
+}
+
+/* Text Dim: text-sm text-[#EAEAEA]/80 mb-4 */
+.footer-text-dim {
+    font-size: 0.875rem;
+    color: rgba(234, 234, 234, 0.8);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* Tagline: text-[#FFB86B] font-semibold text-sm italic */
+.footer-tagline {
+    color: #FFB86B;
+    font-weight: 600;
+    font-size: 0.875rem;
+    font-style: italic;
+}
+
+/* Links List: space-y-2 text-sm */
+.footer-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Link: hover:text-[#F28C28] transition-colors */
+.footer-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: #F28C28;
+}
+
+/* Contact List: space-y-3 text-sm */
+.footer-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+}
+
+/* Contact Item Row: flex items-start space-x-2 */
+.contact-item-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.contact-item-row.center-align {
+    align-items: center;
+}
+
+/* Contact Icon: text-[#FFB86B] */
+.contact-icon {
+    color: #FFB86B;
+    flex-shrink: 0;
+}
+
+.contact-icon.mt-1 {
+    margin-top: 0.25rem;
+}
+
+/* Bottom Bar: pt-8 border-t border-[#1E3A66] flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 */
+.footer-bottom-bar {
+    padding-top: 2rem;
+    border-top: 1px solid #1E3A66;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .footer-bottom-bar {
+        flex-direction: row;
+        gap: 0;
+    }
+}
+
+/* Socials: flex items-center space-x-4 */
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Social Item: text-[#EAEAEA] hover:text-[#F28C28] transition-colors */
+.social-link-item {
+    color: #EAEAEA;
+    transition: color 0.2s;
+}
+
+.social-link-item:hover {
+    color: #F28C28;
+}
+
+/* Copyright: text-sm text-[#EAEAEA]/60 */
+.copyright-text {
+    font-size: 0.875rem;
+    color: rgba(234, 234, 234, 0.6);
+}

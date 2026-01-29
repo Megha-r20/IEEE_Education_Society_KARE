@@ -1,0 +1,31 @@
+.label-root {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* gap-2 */
+    font-size: 0.875rem;
+    /* text-sm */
+    line-height: 1;
+    /* leading-none */
+    font-weight: 500;
+    /* font-medium */
+    user-select: none;
+    /* select-none */
+    color: #EAEAEA;
+}
+
+.label-root[data-error='true'] {
+    color: #ef4444;
+    /* text-destructive */
+}
+
+/* Peer disabled states usually handled by the input's state affecting label via sibling selector in Tailwind. 
+   In standard CSS, we can't easily select label based on peer input disabled unless label follows input, 
+   which is rare (usually label wraps or precedes). 
+   We will rely on JS disabled prop or specific class if needed, but primarily 
+   basic styling is enough here.
+*/
+.label-root[aria-disabled='true'] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

@@ -1,0 +1,77 @@
+.table-responsive {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table-root {
+    width: 100%;
+    caption-side: bottom;
+    font-size: 0.875rem;
+    /* text-sm */
+    border-collapse: collapse;
+    /* Essential for border styles */
+}
+
+.table-header tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* border-b */
+}
+
+.table-body tr:last-child {
+    border-bottom: 0;
+}
+
+.table-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    /* bg-muted/50 simulated via CSS or just border? */
+    background-color: rgba(255, 255, 255, 0.05);
+    /* bg-muted/50 */
+    font-weight: 500;
+}
+
+.table-footer tr:last-child {
+    border-bottom: 0;
+}
+
+.table-row {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.2s;
+}
+
+.table-row:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    /* hover:bg-muted/50 */
+}
+
+.table-row[data-state='selected'] {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* data-[state=selected]:bg-muted */
+}
+
+.table-head {
+    height: 2.5rem;
+    /* h-10 */
+    padding: 0 0.5rem;
+    /* px-2 */
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 500;
+    color: rgba(234, 234, 234, 0.7);
+    /* text-muted-foreground */
+}
+
+/* checkbox alignment hack from user code: [&:has([role=checkbox])]:pr-0 */
+
+.table-cell {
+    padding: 0.5rem;
+    /* p-2 */
+    vertical-align: middle;
+}
+
+.table-caption {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: rgba(234, 234, 234, 0.5);
+    /* text-muted-foreground */
+}

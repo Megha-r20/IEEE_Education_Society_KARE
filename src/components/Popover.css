@@ -1,0 +1,53 @@
+.popover-trigger {
+    /* Reset button styles usually */
+}
+
+.popover-content {
+    background-color: #0F1F3A;
+    /* bg-popover */
+    color: #EAEAEA;
+    /* text-popover-foreground */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.375rem;
+    /* rounded-md */
+    padding: 1rem;
+    /* p-4 */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    width: 18rem;
+    /* w-72 */
+    outline: none;
+    animation: popover-enter 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes popover-enter {
+    from {
+        opacity: 0;
+        transform: translateY(-5px) scale(0.95);
+    }
+
+    /* Note: scale/translate might conflict with inline styles for positioning centering. 
+       If align=center, transform is translateX(-50%). 
+       We should be careful. 
+       If using inline styles for generic pos, CSS animation needs to preserve it or use opacity only.
+    */
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Override animation to be safe if center aligned (which uses translateX(-50%)) */
+/* Actually, best to just animate opacity to avoid transform conflicts in this simple manual imp */
+.popover-content {
+    animation: popover-fade 0.15s ease-out;
+}
+
+@keyframes popover-fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

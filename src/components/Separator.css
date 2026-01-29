@@ -1,0 +1,15 @@
+.separator-root {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* bg-border */
+    flex-shrink: 0;
+}
+
+.separator-horizontal {
+    height: 1px;
+    width: 100%;
+}
+
+.separator-vertical {
+    height: 100%;
+    width: 1px;
+}

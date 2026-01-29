@@ -1,0 +1,47 @@
+.scroll-area-root {
+    position: relative;
+    overflow: hidden;
+    /* Hide overflow of root, let viewport scroll */
+    display: flex;
+    flex-direction: column;
+}
+
+.scroll-area-viewport {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    border-radius: inherit;
+
+    /* Scrollbar Styling */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+
+/* Webkit Scrollbar Styling */
+.scroll-area-viewport::-webkit-scrollbar {
+    width: 0.625rem;
+    /* w-2.5 = 10px */
+    height: 0.625rem;
+}
+
+.scroll-area-viewport::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scroll-area-viewport::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* bg-border */
+    border-radius: 9999px;
+    /* rounded-full */
+    border: 1px solid transparent;
+    /* Acts as padding margin if we use background-clip */
+    background-clip: content-box;
+}
+
+.scroll-area-viewport::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.scroll-area-viewport::-webkit-scrollbar-corner {
+    background: transparent;
+}

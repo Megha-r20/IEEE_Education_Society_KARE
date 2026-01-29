@@ -1,0 +1,104 @@
+/* Team Card Container */
+.team-card-container {
+    background-color: transparent;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.team-card-container:hover {
+    transform: translateY(-8px);
+}
+
+/* Image Wrapper */
+.team-card-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem 0.75rem 0 0;
+    height: 280px;
+    width: 100%;
+    background: linear-gradient(135deg, #F28C28 0%, #E07A10 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Avatar Circle */
+/* Avatar Circle */
+/* Avatar Circle Wrapper - Visuals removed */
+.team-card-avatar-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+/* Icon */
+.team-card-icon {
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+    width: 80px;
+    /* Increased size since circle is gone */
+    height: 80px;
+}
+
+.team-card-container:hover .team-card-avatar-circle {
+    transform: scale(1.1);
+}
+
+.team-card-container:hover .team-card-icon {
+    transform: scale(1.1);
+    color: #FFFFFF;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+
+
+/* Content Section */
+.team-card-content {
+    padding: 1.5rem 1.25rem;
+    padding-top: 1.5rem;
+    /* Removed extra top padding */
+    background-color: #1e3a5f;
+    border-radius: 0 0 0.75rem 0.75rem;
+    text-align: center;
+    /* Center align text */
+}
+
+/* Name */
+.team-card-name {
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+/* Role */
+.team-card-role {
+    color: #FFB86B;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+/* Socials Container */
+.team-card-socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center socials */
+    gap: 0.75rem;
+}
+
+/* Social Link */
+.team-social-link {
+    color: #FFFFFF;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-social-link:hover {
+    color: #FFB86B;
+}

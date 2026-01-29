@@ -1,0 +1,48 @@
+.radio-group-root {
+    display: grid;
+    gap: 0.75rem;
+    /* gap-3 */
+}
+
+.radio-group-item {
+    aspect-ratio: 1 / 1;
+    height: 1rem;
+    /* size-4 */
+    width: 1rem;
+    border-radius: 9999px;
+    /* rounded-full */
+    border: 1px solid #EAEAEA;
+    /* border-primary roughly or user primary */
+    color: #F28C28;
+    /* text-primary */
+    background: transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    cursor: default;
+}
+
+.radio-group-item:focus-visible {
+    box-shadow: 0 0 0 2px #0F1F3A, 0 0 0 4px #F28C28;
+    /* ring-2 ring-ring ring-offset-2 */
+}
+
+.radio-group-item:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.radio-group-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radio-group-item svg {
+    fill: currentColor;
+}
+
+/* Dark mode tweaks if needed */
+/* data-state='checked' styles handled mostly by having the indicator present/absent */

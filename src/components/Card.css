@@ -1,0 +1,66 @@
+/* Base Card */
+.card {
+    background-color: #1E3A66;
+    /* Card bg */
+    color: #EAEAEA;
+    /* Card foreground */
+    border-radius: 0.75rem;
+    /* rounded-xl */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    /* gap-6 initially, adjusted in children usually */
+    overflow: hidden;
+    /* rounded corners clip content */
+}
+
+/* Header */
+.card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    /* gap-1.5 */
+    padding: 1.5rem;
+    /* px-6 pt-6 */
+    padding-bottom: 0;
+    /* Let content determine spacing or override */
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0;
+    color: #EAEAEA;
+}
+
+.card-description {
+    font-size: 0.875rem;
+    /* text-sm */
+    color: rgba(234, 234, 234, 0.6);
+    /* muted-foreground */
+    margin: 0;
+}
+
+/* Content */
+.card-content {
+    padding: 1.5rem;
+    /* px-6 */
+    padding-top: 0;
+    /* Usually follows header, so no top padding */
+}
+
+/* Footer */
+.card-footer {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    /* px-6 pb-6 */
+    padding-top: 0;
+}
+
+/* Action (Top Right optional) */
+.card-action {
+    margin-left: auto;
+}

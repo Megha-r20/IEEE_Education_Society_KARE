@@ -1,0 +1,103 @@
+.carousel-root {
+    position: relative;
+}
+
+.carousel-viewport {
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+}
+
+.carousel-horizontal {
+    /* Horizontal layout default for flex */
+    margin-left: -1rem;
+    /* -ml-4 equivalent offset for spacing */
+}
+
+.carousel-vertical {
+    flex-direction: column;
+    margin-top: -1rem;
+    /* -mt-4 */
+    height: 100%;
+    /* Need height for vertical */
+}
+
+.carousel-item {
+    min-width: 0;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: 100%;
+    /* Default to 1 item visible */
+    padding-left: 1rem;
+    /* pl-4 gutter */
+}
+
+/* If vertical */
+.carousel-vertical .carousel-item {
+    padding-left: 0;
+    padding-top: 1rem;
+    /* pt-4 */
+}
+
+/* User can override basis with utilities or style prop */
+/* Example: basis-1/2, basis-1/3 etc. needs css classes or inline styles */
+
+.carousel-button {
+    position: absolute;
+    border-radius: 9999px;
+    /* rounded-full */
+    width: 2rem;
+    /* size-8 */
+    height: 2rem;
+    padding: 0;
+    background-color: #0F1F3A;
+    /* Background match */
+    color: #EAEAEA;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.carousel-button:hover:not(:disabled) {
+    background-color: #1E3A66;
+}
+
+.carousel-prev-horizontal {
+    top: 50%;
+    left: -3rem;
+    /* -left-12 */
+    transform: translateY(-50%);
+}
+
+.carousel-next-horizontal {
+    top: 50%;
+    right: -3rem;
+    /* -right-12 */
+    transform: translateY(-50%);
+}
+
+.carousel-prev-vertical {
+    top: -3rem;
+    /* -top-12 */
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.carousel-next-vertical {
+    bottom: -3rem;
+    /* -bottom-12 */
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}

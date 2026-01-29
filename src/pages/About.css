@@ -1,0 +1,350 @@
+/* Page Container: min-h-screen bg-[#0F1F3A] */
+.about-page-container {
+    min-height: 100vh;
+    background-color: #0F1F3A;
+    padding-top: 8rem;
+    /* pt-32 */
+    padding-bottom: 6rem;
+    /* pb-24 */
+}
+
+/* Wrapper */
+.about-wrapper {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    .about-wrapper {
+        padding: 0 2rem;
+    }
+}
+
+/* Header */
+.about-header {
+    text-align: center;
+    margin-bottom: 6rem;
+    /* More space */
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-title {
+    font-size: 3rem;
+    color: #FFFFFF;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+    .page-title {
+        font-size: 4rem;
+        /* Larger for impact */
+    }
+}
+
+.page-subtitle {
+    color: #FFB86B;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+/* Sections */
+.about-section {
+    margin-bottom: 6rem;
+    /* Consistent large spacing between sections */
+}
+
+/* Content Card */
+.content-card {
+    background-color: #1E3A66;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+@media (min-width: 768px) {
+    .content-card {
+        padding: 4rem;
+    }
+}
+
+/* Grid Layouts */
+.grid-2-col {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    /* Increased gap */
+}
+
+@media (min-width: 768px) {
+    .grid-2-col {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.center-items {
+    align-items: center;
+}
+
+.grid-3-col {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid-3-col {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Typography Colors */
+.text-orange {
+    color: #F28C28;
+}
+
+.text-light-orange {
+    color: #FFB86B;
+}
+
+.text-white {
+    color: #FFFFFF;
+}
+
+.text-dim {
+    color: #d1d5db;
+    /* Standardized light gray */
+    line-height: 1.7;
+}
+
+.text-dim-80 {
+    color: rgba(234, 234, 234, 0.8);
+    line-height: 1.6;
+}
+
+/* Typography Styles */
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.section-title-large {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.tagline-italic {
+    color: #F28C28;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+/* Images */
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.rounded-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+}
+
+.shadow-effect {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Info Cards (Mission/Vision) */
+.info-card {
+    background-color: #1E3A66;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    /* Left align for cleaner reading */
+    text-align: left;
+}
+
+.info-card.hover-effect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.icon-circle {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: rgba(242, 140, 40, 0.1);
+    /* Subtle background instead of solid orange */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F28C28;
+    /* Icon color */
+}
+
+/* Role Card */
+.role-card {
+    background-color: #1E3A66;
+    /* Keep consistent */
+    border-radius: 1rem;
+    padding: 2.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.role-card.hover-scale:hover {
+    transform: translateY(-5px);
+    background-color: #233f6e;
+    /* Slight lighten on hover */
+}
+
+.role-ico {
+    /* Renamed class in logic if needed, but keeping role-icon from jsx */
+}
+
+.role-icon {
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* University Section */
+.university-card {
+    background: linear-gradient(135deg, #1E3A66 0%, #172a4f 100%);
+    border-radius: 1rem;
+    padding: 3rem;
+}
+
+.university-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.detail-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #F28C28;
+    margin-top: 0.6rem;
+    flex-shrink: 0;
+}
+
+/* Faculty Advisors */
+.advisor-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .advisor-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.advisor-card {
+    background-color: #1E3A66;
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.advisor-card.hover-shadow:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.advisor-avatar {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    background-color: #2a4a7f;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F28C28;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Call to Action Box */
+.cta-box {
+    background: linear-gradient(to right, #1E3A66, #172a4f);
+    border-radius: 1rem;
+    padding: 4rem 2rem;
+    text-align: center;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.cta-box .section-title {
+    margin-bottom: 2rem;
+    /* Increased space after title */
+}
+
+.cta-box .section-subtitle-medium {
+    margin-bottom: 3rem;
+    /* Increased space after description */
+}
+
+.cta-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.btn-primary-link {
+    padding: 0.75rem 2rem;
+    background-color: #F28C28;
+    color: white;
+    border-radius: 0.375rem;
+    /* rounded-md */
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-primary-link:hover {
+    background-color: #ff9d42;
+    transform: translateY(-2px);
+}
+
+.btn-outline-link {
+    padding: 0.75rem 2rem;
+    border: 1px solid #F28C28;
+    color: #F28C28;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-outline-link:hover {
+    background-color: rgba(242, 140, 40, 0.1);
+}

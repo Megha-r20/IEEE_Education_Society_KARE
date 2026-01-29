@@ -1,0 +1,352 @@
+/* CSS Variables for colors, etc are expected to be in global CSS or matched here */
+:root {
+    --sidebar-background: #0F1F3A;
+    --sidebar-foreground: #EAEAEA;
+    --sidebar-primary: #F28C28;
+    --sidebar-primary-foreground: #FFFFFF;
+    --sidebar-accent: rgba(255, 255, 255, 0.1);
+    --sidebar-accent-foreground: #FFFFFF;
+    --sidebar-border: rgba(255, 255, 255, 0.1);
+    --sidebar-ring: rgba(242, 140, 40, 0.5);
+    /* --sidebar-width and icon set in JS inline styles usually, but defaults: */
+}
+
+/* Wrapper */
+.sidebar-wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    /* svh */
+}
+
+/* Base Sidebar (Mobile Content mainly styled via Sheet, but we add inner class) */
+.sidebar-mobile-content {
+    background-color: var(--sidebar-background);
+    color: var(--sidebar-foreground);
+    padding: 0;
+}
+
+.sidebar-mobile-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+/* Desktop Sidebar Logic */
+.sidebar-desktop-root {
+    display: none;
+    /* hidden md:block handled by media query */
+}
+
+@media (min-width: 768px) {
+
+    /* md */
+    .sidebar-desktop-root {
+        display: block;
+    }
+}
+
+/* Gap (The space occupier) */
+.sidebar-gap {
+    position: relative;
+    width: var(--sidebar-width);
+    background-color: transparent;
+    transition: width 0.2s linear;
+}
+
+/* Container (Fixed content) */
+.sidebar-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    display: none;
+    /* hidden by default, md:flex */
+    height: 100vh;
+    width: var(--sidebar-width);
+    transition: left 0.2s linear, right 0.2s linear, width 0.2s linear;
+    background-color: var(--sidebar-background);
+    border-right: 1px solid var(--sidebar-border);
+    /* Default left side border */
+}
+
+@media (min-width: 768px) {
+    .sidebar-container {
+        display: flex;
+    }
+}
+
+/* Collapsible States */
+[data-collapsible='offcanvas'] .sidebar-gap {
+    width: 0;
+}
+
+[data-collapsible='icon'] .sidebar-gap {
+    width: var(--sidebar-width-icon);
+}
+
+/* Left/Right positioning handled in JS classes or here */
+[data-side='left'] .sidebar-container {
+    left: 0;
+}
+
+[data-side='right'] .sidebar-container {
+    right: 0;
+    border-right: none;
+    border-left: 1px solid var(--sidebar-border);
+}
+
+/* Collapsed Offcanvas adjustments */
+[data-side='left'][data-state='collapsed'][data-collapsible='offcanvas'] .sidebar-container {
+    left: calc(var(--sidebar-width) * -1);
+}
+
+[data-side='right'][data-state='collapsed'][data-collapsible='offcanvas'] .sidebar-container {
+    right: calc(var(--sidebar-width) * -1);
+}
+
+/* Icon Collapsed adjustments */
+[data-state='collapsed'][data-collapsible='icon'] .sidebar-container {
+    width: var(--sidebar-width-icon);
+}
+
+.sidebar-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    /* Floating variant styles simplifed out, sticking to standard */
+}
+
+/* Sub Components */
+.sidebar-header,
+.sidebar-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    /* p-2 */
+    gap: 0.5rem;
+}
+
+.sidebar-content {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+[data-collapsible='icon'] .sidebar-content {
+    overflow: hidden;
+    /* Hide scrollbars in icon mode */
+}
+
+.sidebar-group {
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+.sidebar-group-label {
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    /* h-8 */
+    padding: 0 0.5rem;
+    font-size: 0.75rem;
+    /* text-xs */
+    font-weight: 500;
+    color: rgba(234, 234, 234, 0.7);
+    transition: margin 0.2s, opacity 0.2s;
+}
+
+[data-collapsible='icon'] .sidebar-group-label {
+    opacity: 0;
+    margin-top: -2rem;
+    /* Hide label */
+}
+
+.sidebar-group-content {
+    width: 100%;
+    font-size: 0.875rem;
+}
+
+.sidebar-menu {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.sidebar-menu-item {
+    position: relative;
+}
+
+/* Menu Button */
+.sidebar-menu-button {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 0.5rem;
+    overflow: hidden;
+    border-radius: 0.375rem;
+    text-align: left;
+    font-size: 0.875rem;
+    outline: none;
+    transition: background 0.2s, color 0.2s;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    color: var(--sidebar-foreground);
+    text-decoration: none;
+    /* if a link */
+}
+
+.sidebar-menu-button:hover,
+.sidebar-menu-button[data-active='true'] {
+    background-color: var(--sidebar-accent);
+    color: var(--sidebar-accent-foreground);
+}
+
+.sidebar-menu-button-default {
+    padding: 0.5rem;
+}
+
+.sidebar-menu-button-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+}
+
+.sidebar-menu-button-lg {
+    padding: 0.75rem;
+}
+
+[data-collapsible='icon'] .sidebar-menu-button {
+    height: 2rem;
+    width: 2rem;
+    /* size-8 like */
+    padding: 0.5rem !important;
+    /* Force square padding */
+    justify-content: center;
+}
+
+[data-collapsible='icon'] .sidebar-menu-button span {
+    display: none;
+    /* Hide text */
+}
+
+[data-collapsible='icon'] .sidebar-menu-button svg {
+    margin: 0;
+}
+
+/* Sidebar Rail */
+.sidebar-rail {
+    position: absolute;
+    inset: 0 auto;
+    /* top bottom */
+    z-index: 20;
+    width: 1rem;
+    /* w-4 */
+    display: none;
+    /* hidden md:flex */
+    cursor: col-resize;
+    /* simplified */
+    background: transparent;
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .sidebar-rail {
+        display: flex;
+    }
+}
+
+[data-side='left'] .sidebar-rail {
+    right: -1rem;
+}
+
+[data-side='right'] .sidebar-rail {
+    left: 0;
+    transform: translateX(-50%);
+}
+
+.sidebar-rail::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: transparent;
+    transition: background-color 0.2s;
+}
+
+.sidebar-rail:hover::after {
+    background-color: var(--sidebar-border);
+}
+
+/* Inset */
+.sidebar-inset {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: transparent;
+    /* bg-background */
+    width: 100%;
+    overflow: hidden;
+    /* prevent overflow */
+}
+
+/* Menu Sub */
+.sidebar-menu-sub {
+    margin-left: 0.875rem;
+    border-left: 1px solid var(--sidebar-border);
+    padding-left: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+[data-collapsible='icon'] .sidebar-menu-sub {
+    display: none;
+}
+
+.sidebar-menu-sub-button {
+    display: flex;
+    height: 1.75rem;
+    width: 100%;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.375rem;
+    padding: 0 0.5rem;
+    font-size: 0.875rem;
+    color: var(--sidebar-foreground);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sidebar-menu-sub-button:hover,
+.sidebar-menu-sub-button[data-active='true'] {
+    background-color: var(--sidebar-accent);
+}
+
+/* Skeleton */
+.sidebar-menu-skeleton {
+    display: flex;
+    height: 2rem;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+    border-radius: 0.375rem;
+    width: 100%;
+}

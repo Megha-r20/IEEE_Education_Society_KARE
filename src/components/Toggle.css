@@ -1,0 +1,85 @@
+.toggle-root {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.375rem;
+    /* rounded-md */
+    font-size: 0.875rem;
+    /* text-sm */
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+    background: transparent;
+    color: #EAEAEA;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-root:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* hover:bg-muted */
+    color: rgba(234, 234, 234, 0.8);
+}
+
+.toggle-root[data-state='on'] {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* bg-accent */
+    color: #FFFFFF;
+    /* text-accent-foreground */
+}
+
+/* Variants */
+.toggle-default {
+    background-color: transparent;
+}
+
+.toggle-outline {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.toggle-outline:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Sizes */
+.toggle-default {
+    /* size default */
+    height: 2.25rem;
+    /* h-9 */
+    padding: 0 0.75rem;
+    /* px-3 approximately */
+    min-width: 2.25rem;
+}
+
+.toggle-sm {
+    height: 2rem;
+    /* h-8 */
+    padding: 0 0.375rem;
+    /* px-1.5 */
+    min-width: 2rem;
+}
+
+.toggle-lg {
+    height: 2.5rem;
+    /* h-10 */
+    padding: 0 0.625rem;
+    /* px-2.5 */
+    min-width: 2.5rem;
+}
+
+/* Toggle Group specific */
+.toggle-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    /* usually gap-1 or so, but user code overrides sometimes. User code: items-center rounded-md */
+}
+
+/* When inside a group, handle borders or grouping logic if needed. 
+   User code passes: rounded-none first:rounded-l last:rounded-r border-l-0 etc 
+   We will rely on className passing for those specific Tailwind overrides, 
+   or add basic grouping style if not used with Tailwind.
+*/
+.toggle-group-item {
+    /* Base reset if needed, mostly inherited from toggle-root */
+}

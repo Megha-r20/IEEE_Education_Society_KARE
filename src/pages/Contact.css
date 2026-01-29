@@ -1,0 +1,336 @@
+/* Page Container: min-h-screen bg-[#0F1F3A] */
+.contact-page-container {
+    min-height: 100vh;
+    background-color: #0F1F3A;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+}
+
+/* Wrapper */
+.contact-wrapper {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    .contact-wrapper {
+        padding: 0 2rem;
+    }
+}
+
+/* Header */
+.contact-header {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.icon-wrapper-center {
+    display: flex;
+    justify-content: center;
+}
+
+.icon-circle-large-contact {
+    width: 6rem;
+    height: 6rem;
+    background-color: #F28C28;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 15px -3px rgba(242, 140, 40, 0.3);
+}
+
+.page-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.page-subtitle {
+    font-size: 1.25rem;
+    color: #FFB86B;
+}
+
+/* Grid Layout */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    margin-bottom: 6rem;
+}
+
+@media (min-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 3fr 2fr;
+        /* More space for form */
+    }
+}
+
+/* Form Card */
+.contact-form-card {
+    background-color: #172a4f;
+    /* Dark Navy */
+    border-radius: 1rem;
+    padding: 3rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.text-orange {
+    color: #F28C28;
+}
+
+.text-light-orange {
+    color: #FFB86B;
+}
+
+.form-space {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-label {
+    color: #EAEAEA;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border-radius: 0.5rem;
+    background-color: #0F1F3A;
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-color: #F28C28;
+    outline: none;
+    background-color: #132441;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.success-message {
+    background-color: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.5);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    color: #86efac;
+    text-align: center;
+}
+
+.w-full {
+    width: 100%;
+}
+
+/* Info Stack */
+.info-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-card-plain {
+    background-color: #172a4f;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+.icon-circle-small {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(242, 140, 40, 0.1);
+    color: #F28C28;
+    /* Icon color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-circle-small svg {
+    color: #F28C28;
+}
+
+.text-dim-90 {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+.text-dim-80 {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.hover-orange:hover {
+    color: #F28C28;
+}
+
+/* Coordinators */
+.section-title-medium {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.coordinator-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.coordinator-item {
+    background-color: #0F1F3A;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s;
+}
+
+.coordinator-item:hover {
+    border-color: rgba(242, 140, 40, 0.3);
+}
+
+.contact-link-small {
+    color: #F28C28;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.hover-underline:hover {
+    text-decoration: underline;
+}
+
+/* Join Section */
+.join-section {
+    background: linear-gradient(135deg, #F28C28 0%, #d46815 100%);
+    border-radius: 1rem;
+    padding: 4rem 2rem;
+    text-align: center;
+    box-shadow: 0 25px 50px -12px rgba(242, 140, 40, 0.3);
+}
+
+.join-section .section-title-large {
+    margin-bottom: 2rem !important;
+    /* Force override utility class */
+}
+
+.join-section p.text-white-90 {
+    margin-bottom: 3rem !important;
+    /* Force override utility class */
+}
+
+.section-title-large {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.text-white-90 {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.benefits-grid-bottom {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 60rem;
+    margin: 0 auto 3rem auto;
+}
+
+@media (min-width: 768px) {
+    .benefits-grid-bottom {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.benefit-box {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cta-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .cta-group {
+        flex-direction: row;
+    }
+}
+
+.btn-white {
+    padding: 1rem 2.5rem;
+    background-color: white;
+    color: #F28C28;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-white:hover {
+    background-color: #fff8f0;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-white {
+    padding: 1rem 2.5rem;
+    border: 2px solid white;
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-outline-white:hover {
+    background-color: white;
+    color: #F28C28;
+}

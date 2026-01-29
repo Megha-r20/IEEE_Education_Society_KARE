@@ -1,0 +1,325 @@
+/* Page Container: min-h-screen bg-[#0F1F3A] */
+.events-page-container {
+    min-height: 100vh;
+    background-color: #0F1F3A;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+}
+
+/* Wrapper */
+.events-wrapper {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    /* Increased padding */
+}
+
+@media (min-width: 1024px) {
+    .events-wrapper {
+        padding: 0 2rem;
+    }
+}
+
+/* Header */
+.events-header {
+    text-align: center;
+    margin-bottom: 5rem;
+    /* Reduced from 8rem to 5rem */
+}
+
+.section-spacer {
+    margin-bottom: 5rem;
+    /* Generous section spacing */
+}
+
+/* Flagship Banner */
+.flagship-banner {
+    background: linear-gradient(135deg, #F28C28 0%, #d46815 100%);
+    border-radius: 1rem;
+    padding: 3rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    box-shadow: 0 10px 15px -3px rgba(242, 140, 40, 0.2);
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.flagship-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.flagship-subtitle {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+/* Event Details Card (Flagship) */
+.event-details-card {
+    background-color: #172a4f;
+    /* Matched Dark Navy */
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    /* Subtle border */
+}
+
+.grid-2-col-no-gap {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+@media (min-width: 1024px) {
+    .grid-2-col-no-gap {
+        grid-template-columns: 50% 50%;
+        /* Adjusted for balanced layout */
+    }
+}
+
+.image-wrapper-h80 {
+    position: relative;
+    height: 24rem;
+    /* Taller */
+}
+
+@media (min-width: 1024px) {
+    .image-wrapper-h80 {
+        height: 100%;
+        min-height: 32rem;
+    }
+}
+
+.full-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.p-8-12 {
+    padding: 2rem;
+}
+
+@media (min-width: 768px) {
+    .p-8-12 {
+        padding: 3rem;
+        /* Tighter padding as per image */
+    }
+}
+
+.event-title {
+    font-size: 2.25rem;
+    /* Increased size */
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    /* Match Home card style */
+}
+
+.meta-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* Meta Row styles would be here if not skipped, ensuring previous styles remain valid if not overwritten */
+
+.highlights-box {
+    background-color: #0F1F3A;
+    /* Cleaner dark background */
+    border-radius: 0.75rem;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 2.5rem;
+    /* Space from Meta section */
+    margin-bottom: 2.5rem;
+    /* Space to Description */
+}
+
+.highlights-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    /* Open spacing between items */
+}
+
+.highlight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    line-height: 1.5;
+}
+
+/* Winners Grid */
+.winners-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    /* Reduced from 3rem */
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+    .winners-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.winner-card-gradient {
+    border-radius: 1rem;
+    padding: 2px;
+    /* Slight border for gradient */
+    transition: transform 0.3s ease;
+}
+
+.winner-card-gradient.hover-scale:hover {
+    transform: translateY(-8px);
+}
+
+/* Gradients */
+.gradient-orange-blue {
+    background: linear-gradient(to bottom, #F28C28, #172a4f);
+}
+
+.gradient-light-orange-blue {
+    background: linear-gradient(to bottom, #FFB86B, #172a4f);
+}
+
+.gradient-white-blue {
+    background: linear-gradient(to bottom, #EAEAEA, #172a4f);
+}
+
+.winner-card-inner {
+    background-color: #172a4f;
+    /* Matched Dark Navy */
+    border-radius: calc(1rem - 2px);
+    padding: 2.5rem 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.trophy-circle {
+    width: 6rem;
+    height: 6rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.bg-orange {
+    background-color: #F28C28;
+}
+
+.bg-light-orange {
+    background-color: #FFB86B;
+}
+
+.bg-white {
+    background-color: #EAEAEA;
+}
+
+.text-navy {
+    color: #0F1F3A;
+}
+
+.divider-orange,
+.divider-light-orange,
+.divider-white {
+    height: 4px;
+    width: 3rem;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.divider-orange {
+    background-color: #F28C28;
+}
+
+.divider-light-orange {
+    background-color: #FFB86B;
+}
+
+.divider-white {
+    background-color: #EAEAEA;
+}
+
+.team-members {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    margin-top: auto;
+    /* Push to bottom */
+}
+
+/* Past Events Grid */
+.events-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    /* Reduced from 3rem */
+}
+
+@media (min-width: 768px) {
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1100px) {
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Kept at 2 columns to keep cards wider and "shorter" looking */
+        gap: 3rem;
+    }
+}
+
+/* Reused Typography */
+.text-white {
+    color: #EAEAEA;
+}
+
+.text-orange {
+    color: #F28C28;
+}
+
+.text-light-orange {
+    color: #FFB86B;
+}
+
+.text-dim-90 {
+    color: rgba(234, 234, 234, 0.9);
+    line-height: 1.6;
+}
+
+.text-dim-80 {
+    color: rgba(234, 234, 234, 0.8);
+}
+
+.section-title-large {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.section-subtitle-medium {
+    font-size: 1.25rem;
+    color: #FFB86B;
+}
+
+.section-header-center {
+    text-align: center;
+}

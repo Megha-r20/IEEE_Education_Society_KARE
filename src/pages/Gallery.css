@@ -1,0 +1,299 @@
+/* Page Container: min-h-screen bg-[#0F1F3A] */
+.gallery-page-container {
+    min-height: 100vh;
+    background-color: #0F1F3A;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+}
+
+/* Wrapper */
+.gallery-wrapper {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    .gallery-wrapper {
+        padding: 0 2rem;
+    }
+}
+
+/* Header */
+.gallery-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.icon-wrapper-center {
+    display: flex;
+    justify-content: center;
+}
+
+.icon-circle-large-gallery {
+    width: 5rem;
+    height: 5rem;
+    background: linear-gradient(135deg, #F28C28 0%, #d46815 100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(242, 140, 40, 0.3);
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.page-subtitle {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+
+/* Gallery Section */
+.gallery-section {
+    margin-bottom: 6rem;
+}
+
+.section-title-medium {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Polaroid Grid */
+.polaroid-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 640px) {
+    .polaroid-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .polaroid-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.polaroid-card {
+    background-color: #1a2c4e;
+    /* Darker card bg */
+    padding: 1rem 1rem 1.5rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    cursor: default;
+    /* No pointer since not clickable */
+}
+
+.polaroid-card:hover {
+    transform: translateY(-5px) rotate(1deg);
+}
+
+.polaroid-image-wrapper {
+    position: relative;
+    aspect-ratio: 4/3;
+    /* Consistent aspect ratio */
+    margin-bottom: 1rem;
+    background-color: #0d1b32;
+    /* Placeholder bg */
+    width: 100%;
+}
+
+/* New Placeholder Styles */
+.gallery-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #0a1629;
+    /* Very dark blue for placeholder */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 5px solid #FFFFFF;
+    border-radius: 4px;
+}
+
+.full-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-badge {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background-color: rgba(242, 140, 40, 0.9);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    backdrop-filter: blur(4px);
+}
+
+.polaroid-caption {
+    text-align: center;
+    color: #EAEAEA;
+    font-family: 'Shadows Into Light', cursive, sans-serif;
+    /* If font available, else fallback */
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Masonry Grid (Simplified to consistent grid for placeholders) */
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    .masonry-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.grid-image-card {
+    position: relative;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    cursor: default;
+    aspect-ratio: 1;
+    /* Square for grid */
+}
+
+.grid-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.group-hover-scale:hover {
+    transform: scale(1.1);
+}
+
+.grid-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+}
+
+.group-hover-visible:hover {
+    opacity: 1;
+}
+
+/* Categories Grid */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .categories-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.category-card {
+    background-color: #172a4f;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    background-color: #F28C28;
+    transform: translateY(-5px);
+}
+
+.category-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.category-count {
+    color: #9ca3af;
+    font-size: 0.9rem;
+}
+
+.group-hover-white {
+    transition: color 0.3s ease;
+}
+
+.group-hover-white-80 {
+    transition: color 0.3s ease;
+}
+
+.category-card:hover .category-count {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    padding: 6rem 2rem;
+    /* Increased padding top/bottom */
+    background-color: #1a2c4e;
+    /* Ensure background matches request context if relevant, else keep previous */
+    background-color: #172a4f;
+    border-radius: 1.5rem;
+}
+
+.cta-section .section-title {
+    margin-bottom: 3rem;
+    /* Increased from default */
+}
+
+.cta-section p {
+    margin-bottom: 4rem;
+    /* Increased space after description */
+}
+
+.btn-primary-gallery {
+    background-color: #F28C28;
+    color: white;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary-gallery:hover {
+    background-color: #d46815;
+}
+
+/* Typography Helpers */
+.text-white {
+    color: #EAEAEA;
+}
+
+.text-light-orange {
+    color: #FFB86B;
+}
+
+.text-dim-50 {
+    color: rgba(234, 234, 234, 0.5);
+}

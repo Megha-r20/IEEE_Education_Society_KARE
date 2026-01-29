@@ -1,0 +1,68 @@
+.tabs-root {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* gap-2 */
+}
+
+.tabs-list {
+    display: inline-flex;
+    height: 2.25rem;
+    /* h-9 */
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+    /* rounded-xl */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* bg-muted */
+    padding: 0.25rem;
+    /* p-1 approx matched to p-[3px] */
+    color: rgba(234, 234, 234, 0.7);
+    /* text-muted-foreground */
+    width: fit-content;
+}
+
+.tabs-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    border-radius: 0.75rem;
+    /* rounded-xl (match parent minus padding) */
+    padding: 0.25rem 0.75rem;
+    /* px-3 py-1 */
+    font-size: 0.875rem;
+    /* text-sm */
+    font-weight: 500;
+    transition: all 0.2s;
+    background: transparent;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    flex: 1;
+}
+
+.tabs-trigger:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.tabs-trigger[data-state='active'] {
+    background-color: #0F1F3A;
+    /* bg-background/card */
+    color: #EAEAEA;
+    /* text-foreground */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.tabs-trigger:focus-visible {
+    /* ring-2 ring-ring ring-offset-2 */
+    box-shadow: 0 0 0 2px #0F1F3A, 0 0 0 4px #F28C28;
+}
+
+.tabs-content {
+    margin-top: 0.5rem;
+    /* mt-2 like */
+    outline: none;
+}

@@ -1,0 +1,107 @@
+.select-trigger {
+    display: flex;
+    height: 2.25rem;
+    /* h-9 */
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.375rem;
+    /* rounded-md */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* border-input */
+    background-color: transparent;
+    /* bg-background (transparent) */
+    padding: 0.5rem 0.75rem;
+    /* px-3 py-2 */
+    font-size: 0.875rem;
+    /* text-sm */
+    color: #EAEAEA;
+    outline: none;
+    cursor: pointer;
+}
+
+.select-trigger:focus-visible {
+    border-color: #F28C28;
+    box-shadow: 0 0 0 2px rgba(242, 140, 40, 0.3);
+}
+
+.select-trigger[data-placeholder] {
+    color: rgba(234, 234, 234, 0.5);
+    /* text-muted-foreground */
+}
+
+.select-content {
+    background-color: #0F1F3A;
+    /* bg-popover */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    animation: select-enter 0.1s ease-out;
+    max-height: 20rem;
+    overflow: hidden;
+    min-width: 8rem;
+}
+
+.select-viewport {
+    padding: 0.25rem;
+    height: 100%;
+    overflow-y: auto;
+}
+
+@keyframes select-enter {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.select-item {
+    position: relative;
+    display: flex;
+    width: 100%;
+    cursor: default;
+    user-select: none;
+    align-items: center;
+    border-radius: 0.125rem;
+    padding: 0.375rem 2rem 0.375rem 0.5rem;
+    /* pr-8 pl-2 */
+    font-size: 0.875rem;
+    /* text-sm */
+    outline: none;
+    color: #EAEAEA;
+}
+
+.select-item:hover,
+.select-item.selected {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* focus:bg-accent */
+    color: #ffffff;
+}
+
+.select-item-indicator {
+    position: absolute;
+    right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0.875rem;
+    height: 0.875rem;
+}
+
+.select-label {
+    padding: 0.375rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgba(234, 234, 234, 0.5);
+}
+
+.select-separator {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 0.25rem -0.25rem;
+}

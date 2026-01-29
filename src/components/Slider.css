@@ -1,0 +1,85 @@
+.slider-root {
+    position: relative;
+    display: flex;
+    width: 100%;
+    touch-action: none;
+    user-select: none;
+    align-items: center;
+}
+
+.slider-root[data-disabled="true"] {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.slider-horizontal {
+    height: 1.25rem;
+    /* ~5 (20px) needed for thumb hit area usually, track is 4 (1rem) or less */
+}
+
+/* Vertical styles omitted for brevity as user provided code mainly highlights horizontal defaults but had util classes for vertical */
+/* Adding basic vertical support if needed: */
+.slider-vertical {
+    flex-direction: column;
+    width: 1.25rem;
+    height: 100%;
+    min-height: 11rem;
+    /* min-h-44 */
+}
+
+.slider-track {
+    position: relative;
+    flex-grow: 1;
+    overflow: hidden;
+    border-radius: 9999px;
+    /* rounded-full */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* bg-muted */
+}
+
+.slider-horizontal .slider-track {
+    height: 0.5rem;
+    /* h-2 updated from user h-4 which is quite thick, h-2 is standard shadcn default, actually user code says h-4. */
+    /* User code: data-[orientation=horizontal]:h-4. Okay I'll use h-4 (1rem) ? 
+       Wait, h-4 in tailwind is 1rem. That's thick.
+       Usually default is h-2 (0.5rem). The user code says h-4. I will trust user code. 
+    */
+    height: 1rem;
+    width: 100%;
+}
+
+.slider-range {
+    position: absolute;
+    height: 100%;
+    background-color: #F28C28;
+    /* bg-primary */
+}
+
+.slider-thumb {
+    position: absolute;
+    display: block;
+    height: 1rem;
+    /* size-4 */
+    width: 1rem;
+    border-radius: 9999px;
+    border: 2px solid #F28C28;
+    /* border-primary */
+    background-color: #0F1F3A;
+    /* bg-background */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.1s;
+    outline: none;
+    transform: translateX(-50%);
+    /* Centered on value */
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slider-thumb:hover {
+    cursor: pointer;
+}
+
+.slider-thumb:focus-visible {
+    box-shadow: 0 0 0 4px rgba(242, 140, 40, 0.3);
+    /* ring-ring/50 */
+}

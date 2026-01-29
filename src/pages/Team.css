@@ -1,0 +1,227 @@
+/* Page Container: min-h-screen bg-[#0F1F3A] */
+.team-page-container {
+    min-height: 100vh;
+    background-color: #0F1F3A;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+}
+
+/* Wrapper */
+.team-wrapper {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    .team-wrapper {
+        padding: 0 2rem;
+    }
+}
+
+/* Header */
+.team-header {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.icon-wrapper-center {
+    display: flex;
+    justify-content: center;
+}
+
+.icon-circle-large-team {
+    width: 6rem;
+    height: 6rem;
+    background-color: #F28C28;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 15px -3px rgba(242, 140, 40, 0.3);
+}
+
+.page-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.page-subtitle {
+    font-size: 1.25rem;
+    color: #FFB86B;
+}
+
+.text-white {
+    color: #EAEAEA;
+}
+
+.text-light-orange {
+    color: #FFB86B;
+}
+
+/* Sections */
+.team-section {
+    margin-bottom: 6rem;
+}
+
+.section-title-large {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle-medium {
+    font-size: 1.25rem;
+    color: #FFB86B;
+}
+
+.section-header-center {
+    text-align: center;
+}
+
+/* Grids */
+.faculty-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .faculty-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.core-team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .core-team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .core-team-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.tech-team-grid,
+.coordinators-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+
+    .tech-team-grid,
+    .coordinators-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Team Grid 2 - For Faculty Coordinators */
+.team-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .team-grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Team Grid 3 - For Core Team */
+.team-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 640px) {
+    .team-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .team-grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Team Grid 4 - For Core Team (4 columns) */
+.team-grid-4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 640px) {
+    .team-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .team-grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Join Team CTA */
+.join-team-cta {
+    text-align: center;
+    background: linear-gradient(to right, #172a4f, #1E3A66);
+    border-radius: 1rem;
+    padding: 4rem 2rem;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.btn-primary-team {
+    padding: 1rem 2.5rem;
+    background-color: #F28C28;
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 1.1rem;
+}
+
+.btn-primary-team:hover {
+    background-color: #FFB86B;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(242, 140, 40, 0.3);
+}
+
+.join-team-cta .section-title {
+    margin-bottom: 2rem !important;
+    /* Force override utility class */
+}
+
+.join-team-cta p {
+    margin-bottom: 3rem !important;
+    /* Force override utility class */
+}

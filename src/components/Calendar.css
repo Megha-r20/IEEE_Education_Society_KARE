@@ -1,0 +1,177 @@
+/* Root */
+.calendar-root {
+    padding: 0.75rem;
+    /* p-3 */
+}
+
+/* Layout */
+.calendar-months {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* gap-2 */
+}
+
+@media (min-width: 640px) {
+    .calendar-months {
+        flex-direction: row;
+    }
+}
+
+.calendar-month {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* gap-4 */
+}
+
+/* Caption & Nav */
+.calendar-caption {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.25rem;
+    position: relative;
+    align-items: center;
+    width: 100%;
+}
+
+.calendar-caption-label {
+    font-size: 0.875rem;
+    /* text-sm */
+    font-weight: 500;
+    color: #EAEAEA;
+}
+
+.calendar-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    /* gap-1 */
+}
+
+.calendar-nav-button {
+    width: 1.75rem;
+    /* size-7 */
+    height: 1.75rem;
+    padding: 0;
+    background-color: transparent;
+    opacity: 0.5;
+}
+
+.calendar-nav-button:hover {
+    opacity: 1;
+}
+
+.calendar-nav-button-previous {
+    position: absolute;
+    left: 0.25rem;
+}
+
+.calendar-nav-button-next {
+    position: absolute;
+    right: 0.25rem;
+}
+
+.calendar-nav-icon {
+    width: 1rem;
+    /* size-4 */
+    height: 1rem;
+}
+
+/* Table */
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    /* space-x-1 handled by cells padding/margin if needed, usually border-collapse is enough or gap on cells */
+}
+
+.calendar-head-row {
+    display: flex;
+}
+
+.calendar-head-cell {
+    color: rgba(234, 234, 234, 0.7);
+    /* muted-foreground */
+    border-radius: 0.375rem;
+    width: 2rem;
+    /* w-8 */
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.calendar-row {
+    display: flex;
+    width: 100%;
+    margin-top: 0.5rem;
+    /* mt-2 */
+}
+
+/* Cells & Days */
+.calendar-cell {
+    position: relative;
+    padding: 0;
+    text-align: center;
+    font-size: 0.875rem;
+    /* text-sm */
+}
+
+.calendar-cell:focus-within {
+    position: relative;
+    z-index: 20;
+}
+
+.calendar-day {
+    width: 2rem;
+    /* size-8 */
+    height: 2rem;
+    padding: 0;
+    font-weight: 400;
+    color: #EAEAEA;
+}
+
+.calendar-day[aria-selected='true'] {
+    opacity: 1;
+}
+
+.calendar-day-selected {
+    background-color: #F28C28 !important;
+    /* Primary */
+    color: #FFFFFF !important;
+}
+
+.calendar-day-today {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #EAEAEA;
+}
+
+.calendar-day-outside {
+    color: rgba(234, 234, 234, 0.5);
+    /* muted-foreground */
+    opacity: 0.5;
+}
+
+.calendar-day-disabled {
+    color: rgba(234, 234, 234, 0.5);
+    opacity: 0.5;
+}
+
+.calendar-day-hidden {
+    visibility: hidden;
+}
+
+/* Range Selection Styling */
+.calendar-day-range-middle {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Accent */
+    color: #EAEAEA;
+}
+
+.calendar-cell:has(.calendar-day-range-start) {
+    border-top-left-radius: 0.375rem;
+    border-bottom-left-radius: 0.375rem;
+}
+
+.calendar-cell:has(.calendar-day-range-end) {
+    border-top-right-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+}

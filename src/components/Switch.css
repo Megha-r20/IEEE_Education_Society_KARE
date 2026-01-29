@@ -1,0 +1,57 @@
+.switch-root {
+    display: inline-flex;
+    height: 1.25rem;
+    /* h-5 or h-[1.15rem] user requested? User req: h-[1.15rem] w-8 */
+    width: 2rem;
+    /* w-8 */
+    flex-shrink: 0;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 9999px;
+    /* rounded-full */
+    border: 1px solid transparent;
+    transition: background-color 0.2s, color 0.2s;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* data-[state=unchecked]:bg-input/80 (simulated) */
+}
+
+.switch-root[data-state='checked'] {
+    background-color: #F28C28;
+    /* bg-primary */
+}
+
+.switch-root:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.switch-thumb {
+    display: block;
+    height: 1rem;
+    /* size-4 */
+    width: 1rem;
+    border-radius: 9999px;
+    /* rounded-full */
+    background-color: #EAEAEA;
+    /* bg-background/foreground or primary-foreground */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+    transform: translateX(0);
+}
+
+.switch-root[data-state='checked'] .switch-thumb {
+    transform: translateX(calc(100% - 2px));
+    /* translate-x-[calc(100%-2px)] */
+    background-color: #FFFFFF;
+    /* primary-foreground */
+}
+
+/* Dark mode adjustment simulated */
+.switch-root[data-state='unchecked'] .switch-thumb {
+    transform: translateX(2px);
+    /* small offset offset? Radix usually is 0, user code says 0. */
+    transform: translateX(0.125rem);
+    /* small nudge looks better or just 0. */
+    transform: translateX(2px);
+    /* visually centering */
+}
