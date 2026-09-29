@@ -1,16 +1,78 @@
-# React + Vite
+# IEEE Education Society Website — Demo Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive website demo for an IEEE Education Society chapter concept at Kalasalingam Academy of Research and Education (KARE).
 
-Currently, two official plugins are available:
+> **Note:** This is an independent demo project created for educational and portfolio purposes. It is not an official IEEE website, commissioned project, or IEEE-endorsed website.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Demo
 
-## React Compiler
+[View Live Website](https://ieee-education-society-kare.netlify.app/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[View GitHub Repository](https://github.com/Megha-r20/IEEE_Education_Society_KARE)
 
-## Expanding the ESLint configuration
+## 📌 About the Project
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project showcases a modern student-chapter website concept focused on education, technology, events, achievements, and student engagement.
+
+The website includes:
+
+- Home
+- About Us
+- Events
+- Gallery
+- Team
+- Achievements
+- Contact
+
+## ✨ Features
+
+- Responsive design for desktop, tablet, and mobile
+- Component-based React architecture
+- Modern and clean UI
+- Responsive navigation
+- Events and event highlights
+- Gallery section
+- Team and faculty sections
+- Achievements section
+- Contact section
+- Reusable UI components
+- Interactive animations
+- GitHub-based development workflow
+- Netlify deployment
+
+## 🛠️ Tech Stack
+
+**Frontend**
+- React.js
+- Vite
+- JavaScript
+- CSS
+
+**Libraries**
+- React Router DOM
+- Framer Motion
+- Lucide React
+- Recharts
+- React Hook Form
+- Embla Carousel
+
+**Deployment & Version Control**
+- Netlify
+- Git
+- GitHub
+
+## 📂 Project Structure
+
+```text
+IEEE_Education_Society_KARE/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── App.jsx
+│   └── App.css
+├── index.html
+├── package.json
+├── package-lock.json
+└── eslint.config.js
